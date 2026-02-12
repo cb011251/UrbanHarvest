@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Enable manual dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* -----------------------------------------
+   LIGHT MODE COLOURS
+   ----------------------------------------- */
+
+:root {
+  --uh-primary: #fafafa; /* light base */
+  --uh-accent: #00679a; /* brand blue */
+  --uh-secondary: #010101; /* dark text */
+}
+
+/* -----------------------------------------
+   DARK MODE COLOURS
+   ----------------------------------------- */
+
+.dark {
+  --uh-primary: #0f172a; /* deep slate background */
+  --uh-accent: #38bdf8; /* brighter blue for contrast */
+  --uh-secondary: #f5f5f5; /* light text */
+}
+
+/* -----------------------------------------
+   Tailwind v4 Theme Extension
+   ----------------------------------------- */
+
+@theme {
+  /* Fonts */
+  --font-tinos: "Tinos", serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Brand colours */
+  --color-primary: var(--uh-primary);
+  --color-accent: var(--uh-accent);
+  --color-secondary: var(--uh-secondary);
+}
+
+/* -----------------------------------------
+   Base Styles
+   ----------------------------------------- */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--uh-primary);
+  color: var(--uh-secondary);
+  font-family: var(--font-dm-sans);
+}
